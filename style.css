@@ -1,0 +1,189 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Fredoka', sans-serif;
+  background:#fff0f6;
+  color:#333;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+
+  padding:20px 40px;
+
+  background:transparent;
+
+  z-index:1000;
+}
+
+.btn-header{
+  text-decoration:none;
+
+  background:#ff4da6;
+  color:white;
+
+  padding:12px 22px;
+  border-radius:30px;
+
+  font-weight:bold;
+
+  transition:0.3s ease;
+
+  box-shadow:0 5px 15px rgba(255,77,166,0.3);
+}
+
+.btn-header:hover{
+  background:#ff1f8a;
+  transform:translateY(-2px);
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:120px 20px;
+
+  background:
+  linear-gradient(135deg,#ff4da6,#ff8cc6);
+  color:white;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero h1{
+  font-size:52px;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:35px;
+  opacity:0.95;
+}
+
+/* FORMULARIO GENERAL */
+.formulario{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+
+  align-items:center;
+}
+
+/* INPUT */
+.formulario input{
+  width:100%;
+  max-width:420px;
+
+  padding:16px;
+
+  border:none;
+  border-radius:12px;
+
+  font-size:16px;
+
+  outline:none;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* BOTÓN */
+.formulario button{
+  width:100%;
+  max-width:420px;
+
+  padding:16px;
+
+  border:none;
+  border-radius:12px;
+
+  background:white;
+  color:#ff4da6;
+
+  font-size:16px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.formulario button:hover{
+  background:#ffe0ef;
+  transform:translateY(-3px);
+}
+
+/* CTA */
+.cta{
+  background:white;
+
+  padding:100px 20px;
+
+  text-align:center;
+}
+
+.cta h2{
+  font-size:36px;
+  margin-bottom:15px;
+  color:#ff4da6;
+}
+
+.cta p{
+  font-size:18px;
+  margin-bottom:30px;
+  color:#555;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:white;
+
+  text-align:center;
+
+  padding:25px;
+
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  header{
+    justify-content:center;
+  }
+
+}

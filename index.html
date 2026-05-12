@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BELLEZA | Suscríbete</title>
+
+  <meta name="description" content="Recibe promociones exclusivas y descuentos en servicios de belleza.">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EMAILJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#registro" class="btn-header">
+      Registrarme
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Tu belleza, más fácil que nunca ✨</h1>
+
+      <p>
+        Suscríbete y recibe descuentos exclusivos,
+        promociones especiales y acceso prioritario
+        a nuestros servicios de belleza.
+      </p>
+
+      <!-- FORMULARIO 1 -->
+      <form class="formulario" id="formHero">
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Ingresa tu correo electrónico"
+          required
+        >
+
+        <button type="submit">
+          Suscribirme
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Únete hoy y recibe descuentos exclusivos 💖</h2>
+
+    <p>Miles de personas ya disfrutan nuestros servicios.</p>
+
+    <!-- FORMULARIO 2 -->
+    <form class="formulario" id="formCTA">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required
+      >
+
+      <button type="submit">
+        Quiero mis descuentos
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 BELLEZA - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- EMAILJS SCRIPT -->
+  <script>
+    (function () {
+      emailjs.init("TU_PUBLIC_KEY"); // 🔴 REEMPLAZA ESTO
+    })();
+
+    function enviarEmail(form) {
+      emailjs.sendForm(
+        "TU_SERVICE_ID",   // 🔴 REEMPLAZA
+        "TU_TEMPLATE_ID",  // 🔴 REEMPLAZA
+        form
+      )
+      .then(() => {
+        alert("¡Suscripción enviada correctamente!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+        alert("Error al enviar. Intenta nuevamente.");
+      });
+    }
+
+    document.getElementById("formHero").addEventListener("submit", function(e) {
+      e.preventDefault();
+      enviarEmail(this);
+    });
+
+    document.getElementById("formCTA").addEventListener("submit", function(e) {
+      e.preventDefault();
+      enviarEmail(this);
+    });
+
+  </script>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
